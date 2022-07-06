@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
+<div class="loader-wrapper">
+<span class = "loader">
 <svg id="logo"
      width="887" height="254" viewBox="0 0 887 254" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask id="path-1-outside-1_15_5" maskUnits="userSpaceOnUse" x="0.448853" y="0.636353" width="887" height="253" fill="black">
@@ -45,7 +47,18 @@
     <path d="M537.858 157.909V251H526.585V157.909H537.858Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1_15_5)"/>
     <path d="M557.369 251V242.818L607.551 167.909H556.824V157.909H621.006V166.091L570.824 241H621.551V251H557.369Z" stroke="white" stroke-width="2" mask="url(#path-1-outside-1_15_5)"/>
 </svg>
-
+</span>
+</div>
+<script>
+    $(window).on("load", function(){
+        if($(".loader-wrapper").length){
+            $(".loader-wrapper").delay(2000).fadeOut(6000);
+        }
+    });
+    // $(window).on("load", function(){
+    //     $(".loader-wrapper").fadeOut("slow");
+    // });
+</script>
 
 
 
@@ -54,7 +67,7 @@
 <!--    stroke="white"-->
 <!--    stroke-width="5"-->
 <!--    />-->
-<script src="app.js"></script>
+<script src="../app.js"></script>
 </body>
 </html>
 
